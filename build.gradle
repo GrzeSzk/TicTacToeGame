@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.6.6' //do usunięcia
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' //do usunięcia
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+javafx {
+    version = "17.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+mainClassName = "com.kodilla.tictactoe.TicTacToeApplication"
+
+group = 'com.kodilla'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web' //do usunięcia
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' //do usunięcia
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
